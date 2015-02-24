@@ -2,19 +2,26 @@
 // Home page
 package quizdroid.kylep9.washington.edu.quizdroid;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.Iterator;
 
 
 public class MainActivity extends ActionBarActivity {
     protected QuizApp app;
+    private PendingIntent pendingIntent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +39,6 @@ public class MainActivity extends ActionBarActivity {
                 final Intent nextActivity = new Intent(MainActivity.this, QuestionActivity.class);
                 nextActivity.putExtra("topic-name", button1.getText());
                 startActivity(nextActivity);
-                finish();
             }
         });
 
@@ -45,7 +51,6 @@ public class MainActivity extends ActionBarActivity {
                 final Intent nextActivity = new Intent(MainActivity.this, QuestionActivity.class);
                 nextActivity.putExtra("topic-name", button2.getText());
                 startActivity(nextActivity);
-                finish();
             }
         });
 
@@ -58,11 +63,10 @@ public class MainActivity extends ActionBarActivity {
                 final Intent nextActivity = new Intent(MainActivity.this, QuestionActivity.class);
                 nextActivity.putExtra("topic-name", button3.getText());
                 startActivity(nextActivity);
-                finish();
 
             }
         });
-
+        initializeAlarm();
     }
 
     @Override
@@ -77,14 +81,25 @@ public class MainActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case R.id.pref_button:
+                final Intent nextActivity = new Intent(MainActivity.this, UserSettingActivity.class);
+                startActivityForResult(nextActivity, 1);
 
-        // noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void initializeAlarm() {
+        AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        Intent alarmIntent = new Intent(MainActivity.this, RepeatingAlarm.class);
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        int interval = Integer.parseInt(sharedPrefs.getString("alarmFrequency", "1"));
+        pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, alarmIntent, 0);
+        manager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), interval * 60 * 1000, pendingIntent);
+        Toast.makeText(MainActivity.this, "Alarm Set", Toast.LENGTH_SHORT).show();
     }
 
 }

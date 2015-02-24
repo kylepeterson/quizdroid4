@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/Users/kylepeterson/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/kylepeterson/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-cea6956a01359b7af21da48f72c53f879be9d667.jar" />
-    </item>
-    <item
-        jar="/Users/kylepeterson/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/kylepeterson/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-3fab0d65d37a7652cc46db5e00bf303da73c11e4.jar" />
-    </item>
-    <item
-        jar="/Users/kylepeterson/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jar="/Users/iguest/AndroidStudioProjects/quizdroid4/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/kylepeterson/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/classes-3b8f0a1170c8bbea22a275111211d2520b2e1c54.jar" />
+        <dex dex="/Users/iguest/AndroidStudioProjects/quizdroid4/app/build/intermediates/pre-dexed/debug/classes-903822f9b0458c7c71dd0abdc84a4a527c02c571.jar" />
     </item>
     <item
-        jar="/Users/kylepeterson/AndroidStudioProjects/QuizDroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jar="/Users/iguest/AndroidStudioProjects/quizdroid4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/kylepeterson/AndroidStudioProjects/QuizDroid/app/build/intermediates/pre-dexed/debug/classes-3e824bd1bcec99d38710ceb8455accd20c3cd629.jar" />
+        <dex dex="/Users/iguest/AndroidStudioProjects/quizdroid4/app/build/intermediates/pre-dexed/debug/classes-ce400518dd8a3e2c220013227a6e5791f0b4bb7d.jar" />
+    </item>
+    <item
+        jar="/Users/iguest/AndroidStudioProjects/quizdroid4/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/iguest/AndroidStudioProjects/quizdroid4/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-f027a9bd1027600e23ca34dac7dd3fc47352e39d.jar" />
+    </item>
+    <item
+        jar="/Users/iguest/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/iguest/AndroidStudioProjects/quizdroid4/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-4af7d6332c26af2f77965e6927554b935e27e503.jar" />
     </item>
 
 </items>
